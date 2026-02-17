@@ -2,17 +2,24 @@
 
 This project is designed to simulate and replay CAN (Controller Area Network) bus data for reverse engineering and analysis purposes. It provides a simple environment to log, analyze, and replay CAN messages, making it useful for automotive research, diagnostics, and educational demonstrations.
 
+
 ## Features
-- Replay CAN bus data from log files
+- Replay recorded CAN data from CSV files, preserving original timing
+- Replay CAN data with on-the-fly modification (e.g., scale speed values)
+- Generate and inject custom CAN messages at specified frequencies
 - Dockerized setup for easy deployment
 - Example speed log included
 
 ## Getting Started
 
-### Prerequisites
+- Linux with SocketCAN support
+- python-can Python package
+- can-utils (for working with CAN interfaces)
 - Docker
 - Python 3.x
 - Git
+
+> **Note:** SocketCAN and can-utils must be set up on the host system, not inside the Docker container. The container does not configure or provide CAN interfaces.
 
 ### Setup
 1. Clone this repository:
